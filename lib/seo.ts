@@ -6,7 +6,7 @@
 export const SITE_NAME = "Hidayah Hub";
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://hidayah-hub.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://hidayah-hub-jet.vercel.app";
 
 export const SITE_DESCRIPTION =
   "Hidayah Hub is a serene Islamic digital companion — complete Quran PDF download, full Hadith collections (Sahih al-Bukhari, Sahih Muslim, Sunan in Arabic, Urdu & English), accurate prayer times, daily zikr, duas, Qibla direction and more.";
