@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+/* Class-based dark mode for next-themes */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: Georgia, Cambria, "Times New Roman", ui-serif, serif;
+  --font-arabic: var(--font-noto-naskh), var(--font-amiri), "Scheherazade New", "Amiri",
+    "Traditional Arabic", serif;
+
+  /* Hidayah brand palette — deep navy blue (sober, premium) */
+  --color-brand-50: #f5f7fa;
+  --color-brand-100: #e9edf3;
+  --color-brand-200: #d2dae6;
+  --color-brand-400: #8298b3;
+  --color-brand-500: #637c9c;
+  --color-brand-600: #4d6488;
+  --color-brand-700: #3f5270;
+  --color-brand-800: #2f3d55;
+  --color-brand-900: #1a202c;
+  --color-brand-950: #12161f;
+
+  /* Muted gold accent for Islamic ornament */
+  --color-gold-50: #fbf8f0;
+  --color-gold-100: #f6eeda;
+  --color-gold-200: #ecdbb4;
+  --color-gold-300: #e0c389;
+  --color-gold-400: #d1ab66;
+  --color-gold-500: #bfa059;
+  --color-gold-600: #a48647;
+  --color-gold-700: #856b3a;
+  --color-gold-800: #6b5530;
+  --color-gold-900: #574629;
+
+  /* Soft cream paper background (light mode) */
+  --color-cream: #fbf9f6;
+
+  /* Deep night background for dark mode */
+  --color-night-800: #1c2534;
+  --color-night-900: #131a26;
+  --color-night-950: #0e141d;
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade-in: fade-in 0.6s ease-out both;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-eq: eq 0.9s ease-in-out infinite;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+  @keyframes eq {
+    0%,
+    100% {
+      transform: scaleY(0.35);
+    }
+    50% {
+      transform: scaleY(1);
+    }
+  }
+}
+
+@layer base {
+  html,
+  body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-slate-700 antialiased dark:bg-night-950 dark:text-slate-300;
+  }
+
+  ::selection {
+    @apply bg-brand-200 text-brand-950 dark:bg-brand-800 dark:text-brand-50;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-slate-300 dark:bg-night-800;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-[#BFA059];
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .bg-ornament {
+    background-image: radial-gradient(
+        ellipse at top,
+        color-mix(in srgb, var(--color-gold-300) 25%, transparent),
+        transparent 60%
+      );
+  }
+}
+
+/* Islamic geometric divider pattern */
+.pattern-arch {
+  background-image: radial-gradient(
+    circle at 50% 0,
+    color-mix(in srgb, var(--color-brand-600) 12%, transparent) 0 38%,
+    transparent 38%
+  );
+}
