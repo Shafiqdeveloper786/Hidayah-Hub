@@ -1,0 +1,3 @@
+Failed to set fetch cache https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/eng-bukhari.min.json Error: Failed to set Next.js data cache for https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/eng-bukhari.min.json, items over 2MB can not be cached (6429365 bytes)
+    at ignore-listed frames
+^C^C

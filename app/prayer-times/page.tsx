@@ -167,6 +167,7 @@ export default function PrayerTimesPage() {
   const togglePlayAdhan = () => {
     if (isPlayingAdhan && activeAudioRef.current) {
       activeAudioRef.current.pause();
+      activeAudioRef.current.currentTime = 0; // reset so replay starts from beginning
       activeAudioRef.current = null;
       setIsPlayingAdhan(false);
       return;
@@ -178,6 +179,8 @@ export default function PrayerTimesPage() {
     }
 
     const audio = new Audio("/makkah-adhan.mp3");
+    audio.preload = "auto";
+    audio.currentTime = 0;
     activeAudioRef.current = audio;
 
     audio.onended = () => {
@@ -186,6 +189,10 @@ export default function PrayerTimesPage() {
     };
     audio.onpause = () => {
       setIsPlayingAdhan(false);
+    };
+    audio.onerror = () => {
+      setIsPlayingAdhan(false);
+      activeAudioRef.current = null;
     };
 
     audio

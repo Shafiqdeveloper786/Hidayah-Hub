@@ -1,0 +1,32 @@
+
+> hidayah-hub@0.1.0 dev
+> next dev --turbopack
+
+▲ Next.js 16.3.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.40.54.224:3000
+- Environments: .env.local
+✓ Ready in 1007ms
+✓ Running next.config.ts took 79ms
+- Experiments (use with caution):
+  · optimizePackageImports
+
+ GET / 200 in 837ms (next.js: 441ms, application-code: 396ms)
+ GET / 200 in 95ms (next.js: 5ms, application-code: 90ms)
+ HEAD /quran 200 in 218ms (next.js: 96ms, application-code: 122ms)
+ GET / 200 in 96ms (next.js: 5ms, application-code: 91ms)
+ GET /quran 200 in 185ms (next.js: 8ms, application-code: 176ms)
+ GET /hadith 200 in 4.4s (next.js: 66ms, application-code: 4.4s)
+ GET /prayer-times 200 in 205ms (next.js: 55ms, application-code: 150ms)
+ GET /ai 200 in 186ms (next.js: 63ms, application-code: 123ms)
+ GET /zikr 200 in 184ms (next.js: 52ms, application-code: 132ms)
+ GET /reflections 200 in 202ms (next.js: 50ms, application-code: 152ms)
+ GET /duas 200 in 233ms (next.js: 45ms, application-code: 187ms)
+ GET /qibla 200 in 187ms (next.js: 48ms, application-code: 139ms)
+ GET /donate 200 in 180ms (next.js: 43ms, application-code: 136ms)
+ GET /about 200 in 194ms (next.js: 51ms, application-code: 143ms)
+ GET /more 200 in 174ms (next.js: 47ms, application-code: 127ms)
+ GET /quiz 200 in 138ms (next.js: 40ms, application-code: 98ms)
+ GET /sitemap.xml 200 in 136ms (next.js: 105ms, application-code: 31ms)
+ GET /robots.txt 200 in 65ms (next.js: 56ms, application-code: 9ms)
+ GET / 200 in 135ms (next.js: 6ms, application-code: 130ms)
