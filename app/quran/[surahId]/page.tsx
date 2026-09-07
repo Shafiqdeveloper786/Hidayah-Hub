@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SurahReader } from "@/components/quran/SurahReader";
 import { getSurah, SURAHS } from "@/data/surahs";
+import { siteUrl } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ surahId: string }>;
@@ -15,8 +16,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const surah = getSurah(surahId);
   if (!surah) return { title: "Surah not found" };
   return {
-    title: `${surah.transliteration} (${surah.english})`,
-    description: `Read Surah ${surah.transliteration} — ${surah.ayahs} ayahs, ${surah.revelation}. Arabic text with Sahih International translation.`,
+    title: `Surah ${surah.transliteration} (${surah.english}) — Read Online`,
+    description: `Read Surah ${surah.transliteration} — ${surah.ayahs} ayahs, ${surah.revelation}. Arabic text with Urdu & English translation at Hidayah Hub.`,
+    alternates: { canonical: siteUrl(`/quran/${surah.id}`) },
+    openGraph: {
+      title: `Surah ${surah.transliteration} (${surah.english}) — Read Online`,
+      description: `Read Surah ${surah.transliteration} — ${surah.ayahs} ayahs with Arabic, Urdu & English translation.`,
+      url: siteUrl(`/quran/${surah.id}`),
+      siteName: "Hidayah Hub",
+      type: "article",
+    },
   };
 }
 

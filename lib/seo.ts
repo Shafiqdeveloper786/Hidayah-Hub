@@ -5,22 +5,24 @@
 
 export const SITE_NAME = "Hidayah Hub";
 
+/** Production domain — update here to switch the entire site's canonical/SEO URLs. */
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://hidayah-hub-jet.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://hidayah-hub-official.vercel.app";
 
 export const SITE_DESCRIPTION =
-  "Hidayah Hub is a serene Islamic digital companion — complete Quran PDF download, full Hadith collections (Sahih al-Bukhari, Sahih Muslim, Sunan in Arabic, Urdu & English), accurate prayer times, daily zikr, duas, Qibla direction and more.";
+  "Hidayah Hub is your free Islamic Companion — read the Quran Online in Arabic, Urdu & English with PDF download, explore complete Hadith Collections (Sahih al-Bukhari, Muslim, Sunan), get accurate Prayer Times, daily Zikr, Duas & Qibla direction.";
 
 export const SITE_KEYWORDS = [
   "Hidayah Hub",
-  "Quran",
-  "Qur'an PDF download",
+  "Islamic Companion",
+  "Quran Online",
+  "Hadith Collections",
+  "Prayer Times",
   "Complete Quran PDF",
   "Sahih al-Bukhari",
   "Sahih Muslim",
-  "Hadith Urdu English Arabic",
   "Kutub al-Sittah",
-  "Prayer times",
+  "Hadith Urdu English Arabic",
   "Namaz times",
   "Zikr",
   "Tasbeeh",
@@ -31,6 +33,7 @@ export const SITE_KEYWORDS = [
   "Urdu hadith",
   "حدیث",
   "قرآن",
+  "نوائے وقت",
 ];
 
 /** Join the base URL with a path. */

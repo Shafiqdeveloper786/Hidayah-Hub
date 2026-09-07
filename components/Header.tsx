@@ -78,14 +78,16 @@ function DrawerLink({
       >
         {Icon ? <Icon className="size-4.5" aria-hidden /> : null}
       </span>
-      <span className="flex-1 text-left">{link.label}</span>
+      <span className="min-w-0 flex-1 truncate text-left text-[15px] font-semibold leading-snug text-slate-800 dark:text-slate-100">
+        {link.label}
+      </span>
       {active ? (
         <span
-          className="size-1.5 rounded-full bg-[#BFA059] shadow-[0_0_6px_rgba(191,160,89,0.8)]"
+          className="size-1.5 shrink-0 rounded-full bg-[#BFA059] shadow-[0_0_6px_rgba(191,160,89,0.8)]"
           aria-label="Current page"
         />
       ) : (
-        <ChevronRight className="size-4 text-slate-300 transition-transform group-hover:translate-x-0.5 dark:text-slate-600" />
+        <ChevronRight className="size-4 shrink-0 text-slate-300 transition-transform group-hover:translate-x-0.5 dark:text-slate-600" />
       )}
     </Link>
   );
@@ -136,7 +138,8 @@ export function Header() {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-cream/85 backdrop-blur-lg dark:border-night-800 dark:bg-night-950/85">
+    <>
+      <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-cream/95 dark:border-night-800 dark:bg-night-950/95">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2.5 px-4 sm:px-6 lg:px-8">
         {/* Brand */}
         <Link
@@ -245,6 +248,7 @@ export function Header() {
           </button>
         </div>
       </div>
+</header>
 {/* ══ MOBILE DRAWER (slide-over from the right) ═══════════════════════ */}
       <div
         id="mobile-nav"
@@ -269,7 +273,7 @@ export function Header() {
         {/* Drawer panel */}
         <div
           className={cn(
-            "absolute right-0 top-0 h-full w-[85%] max-w-sm overflow-y-auto overscroll-contain border-l border-slate-200 bg-cream shadow-2xl dark:border-night-800 dark:bg-night-900",
+            "absolute right-0 top-0 z-10 h-full w-[85%] max-w-sm overflow-y-auto overscroll-contain border-l border-slate-200 bg-cream shadow-2xl dark:border-night-800 dark:bg-night-900",
             menuOpen ? "translate-x-0" : "translate-x-full"
           )}
           style={{ transition: "transform 0.32s cubic-bezier(0.22, 1, 0.36, 1)" }}
@@ -356,6 +360,6 @@ export function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </>
   );
 }

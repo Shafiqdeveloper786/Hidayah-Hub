@@ -5,10 +5,11 @@ import { loadBookDataset } from "@/lib/hadithData";
 import { SITE_NAME, SITE_URL, siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Complete Hadith Books — Sahih Bukhari, Muslim, Tirmidhi (Arabic, Urdu & English)",
+  title: "Hadith Collections — Complete Sahih Bukhari, Muslim & Sunan in Arabic, Urdu & English",
   description:
-    "Read the complete Sahih al-Bukhari, Sahih Muslim, Sunan Abi Dawud, Jami at-Tirmidhi, Sunan an-Nasa'i and Sunan Ibn Majah — full Kutub al-Sittah with Arabic, Urdu and English text, free.",
+    "Explore complete Hadith Collections (Kutub al-Sittah) at Hidayah Hub — Sahih al-Bukhari, Sahih Muslim, Sunan Abi Dawud, Jami at-Tirmidhi, Sunan an-Nasa'i and Sunan Ibn Majah with Arabic, Urdu and English text, free.",
   keywords: [
+    "Hadith Collections",
     "Sahih al-Bukhari complete",
     "Sahih Muslim Urdu English Arabic",
     "Kutub al-Sittah",

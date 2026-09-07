@@ -37,7 +37,7 @@ const notoNaskh = Noto_Naskh_Arabic({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Hidayah Hub — Quran, Hadith, Prayer Times & Daily Zikr for Every Muslim",
+    default: "Hidayah Hub — Islamic Companion: Quran Online, Hadith Collections & Prayer Times",
     template: "%s · Hidayah Hub",
   },
   description: SITE_DESCRIPTION,
@@ -54,12 +54,12 @@ export const metadata: Metadata = {
     alternateLocale: ["ur_PK", "ar_SA"],
     url: siteUrl("/"),
     siteName: SITE_NAME,
-    title: "Hidayah Hub — Quran, Hadith, Prayer Times & Daily Zikr",
+    title: "Hidayah Hub — Islamic Companion | Quran Online, Hadith Collections & Prayer Times",
     description: SITE_DESCRIPTION,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hidayah Hub — Quran, Hadith, Prayer Times & Daily Zikr",
+    title: "Hidayah Hub — Islamic Companion | Quran Online, Hadith Collections & Prayer Times",
     description: SITE_DESCRIPTION,
   },
   robots: {
