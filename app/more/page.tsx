@@ -186,7 +186,7 @@ export default function MorePage() {
           <Image
             src="/ai-banner.jpg"
             alt="Arkan al-Islam Banner"
-            fill
+            fill sizes="100vw" quality={75}
             className="object-cover object-center scale-105"
             priority
           />
@@ -216,7 +216,7 @@ export default function MorePage() {
           <h2 className="font-serif text-2xl sm:text-3xl font-bold uppercase tracking-wider text-[#1A202C] dark:text-gold-100">
             The Five Pillars of Islam (أركان الإسلام)
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             The foundational obligations that construct the structure of a Muslim's faith and daily life.
           </p>
         </div>
@@ -335,7 +335,7 @@ export default function MorePage() {
                 <span className="text-xs font-black uppercase tracking-widest text-[#EAD090]">
                   Pillar #{selectedPillar.number}
                 </span>
-                <span className="text-[10px] text-slate-400 font-bold max-w-[180px]">
+                <span className="text-[10px] text-slate-300 font-bold max-w-[180px]">
                   {selectedPillar.hadithRef}
                 </span>
               </div>
@@ -386,7 +386,7 @@ export default function MorePage() {
           <h2 className="font-serif text-2xl font-bold uppercase tracking-wider text-[#1A202C] dark:text-gold-100">
             Auxiliary Tools &amp; Features
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
             Explore extra interactive Islamic resources designed for daily spiritual practice.
           </p>
         </div>
@@ -412,7 +412,7 @@ export default function MorePage() {
                       {tool.title}
                     </h3>
                   </div>
-                  <p className="text-xs text-slate-600 dark:text-slate-400">
+                  <p className="text-xs text-slate-600 dark:text-slate-300">
                     {tool.subtitle}
                   </p>
                 </div>

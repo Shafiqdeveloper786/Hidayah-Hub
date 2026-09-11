@@ -86,7 +86,7 @@ export function SurahReader({ surahId }: { surahId: number }) {
   if (!surah) {
     return (
       <div className="rounded-3xl border border-slate-200 p-12 text-center dark:border-night-800">
-        <p className="text-slate-500">This Surah could not be found.</p>
+        <p className="text-slate-500 dark:text-slate-300">This Surah could not be found.</p>
         <Link href="/quran" className="mt-3 inline-block text-brand-700 underline dark:text-gold-400">
           Browse all Surahs
         </Link>
@@ -160,7 +160,7 @@ export function SurahReader({ surahId }: { surahId: number }) {
             {showTranslation ? <Eye className="size-3.5" /> : <EyeOff className="size-3.5" />}
             Translation
           </button>
-          <span className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400">
+          <span className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-300">
             <Braces className="size-3.5" /> Arabic
             <input
               type="range"
@@ -173,7 +173,7 @@ export function SurahReader({ surahId }: { surahId: number }) {
             />
           </span>
         </div>
-        <p className="text-xs text-slate-500 dark:text-slate-400">
+        <p className="text-xs text-slate-500 dark:text-slate-300">
           {data
             ? `${data.arabic.numberOfAyahs} ayahs · pages ${data.arabic.ayahs[0]?.page ?? "–"}–${
                 data.arabic.ayahs[data.arabic.ayahs.length - 1]?.page ?? ""
@@ -229,7 +229,7 @@ export function SurahReader({ surahId }: { surahId: number }) {
                     {ayah.text}
                   </p>
                   {showTranslation ? (
-                    <p className="mt-3 border-t border-dashed border-slate-200 pt-3 text-[15px] leading-relaxed text-slate-600 dark:border-night-700 dark:text-slate-400">
+                    <p className="mt-3 border-t border-dashed border-slate-200 pt-3 text-[15px] leading-relaxed text-slate-600 dark:border-night-700 dark:text-slate-300">
                       {englishAyahs[index]?.text ?? ""}
                     </p>
                   ) : null}

@@ -139,7 +139,7 @@ function AiSearchContent() {
           <Image
             src="/ai-banner.jpg"
             alt="Ask Hidayah AI Search Islamic Guidance Banner"
-            fill
+            fill sizes="100vw" quality={75}
             className="object-cover object-center scale-105"
             priority
           />

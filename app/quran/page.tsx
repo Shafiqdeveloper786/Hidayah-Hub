@@ -417,7 +417,7 @@ export default function QuranPage() {
           <Image
             src="/ai-banner.jpg"
             alt="AI Search Quran Panel"
-            fill
+            fill sizes="100vw" quality={75}
             className="object-cover object-center scale-105 transition-transform duration-1000 hover:scale-100"
             priority
           />
@@ -543,7 +543,7 @@ export default function QuranPage() {
                       <p className="text-sm font-bold text-[#1A202C] dark:text-gold-100 truncate">
                         {s.transliteration}
                       </p>
-                      <p className="text-[10px] text-slate-500 dark:text-slate-400">
+                      <p className="text-[10px] text-slate-500 dark:text-slate-300">
                         {s.english} · {s.ayahs} Verses
                       </p>
                     </div>
@@ -604,7 +604,7 @@ export default function QuranPage() {
 
               {/* Font Size Adjuster Controls */}
               <div className="flex items-center gap-1.5 rounded-xl border border-[#BFA059]/40 bg-white px-3 py-1.5 shadow-sm dark:bg-night-900">
-                <span className="text-[11px] font-bold text-slate-500 dark:text-slate-400">Size:</span>
+                <span className="text-[11px] font-bold text-slate-500 dark:text-slate-300">Size:</span>
                 <button
                   type="button"
                   onClick={() => setFontSize((s) => Math.max(26, s - 3))}
@@ -625,7 +625,7 @@ export default function QuranPage() {
                 <button
                   type="button"
                   onClick={() => setFontSize(38)}
-                  className="ml-1 rounded p-1 hover:bg-slate-100 text-slate-400 dark:hover:bg-night-800"
+                  className="ml-1 rounded p-1 hover:bg-slate-100 text-slate-300 dark:hover:bg-night-800"
                   title="Reset font size"
                 >
                   <RotateCcw className="size-3" />
@@ -729,7 +729,7 @@ export default function QuranPage() {
                 <span className="font-serif text-xs font-bold uppercase tracking-[0.25em] text-[#BFA059]">
                   ﴿ سُورَةُ {selectedSurah.name} — MUSHAF AL-KAREEM ﴾
                 </span>
-                <p className="mt-1 text-[11px] text-slate-500 dark:text-slate-400">
+                <p className="mt-1 text-[11px] text-slate-500 dark:text-slate-300">
                   Click any verse to listen &amp; highlight in real-time
                 </p>
               </div>
@@ -922,7 +922,7 @@ export default function QuranPage() {
                 <p className="text-base font-bold text-[#121A26] dark:text-[#F3E5C8]">
                   Full Tilawat Mode: {selectedSurah.transliteration} ({selectedSurah.name})
                 </p>
-                <p className="mt-1 text-xs text-slate-500">
+                <p className="mt-1 text-xs text-slate-500 dark:text-slate-300">
                   Recitation by Sheikh Mishary Rashid Alafasy. Verses highlight &amp; scroll automatically in real-time as audio plays.
                 </p>
               </div>
@@ -990,7 +990,7 @@ export default function QuranPage() {
 
             {/* Audio Progress Slider */}
             <div className="flex items-center gap-2 w-full sm:w-1/2">
-              <span className="text-[10px] font-mono text-slate-400">{formatTime(currentTime)}</span>
+              <span className="text-[10px] font-mono text-slate-300">{formatTime(currentTime)}</span>
               <input
                 type="range"
                 min={0}
@@ -1003,7 +1003,7 @@ export default function QuranPage() {
                 }}
                 className="w-full accent-[#BFA059] h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer"
               />
-              <span className="text-[10px] font-mono text-slate-400">{formatTime(duration)}</span>
+              <span className="text-[10px] font-mono text-slate-300">{formatTime(duration)}</span>
             </div>
 
             {/* Player Controls */}
@@ -1044,7 +1044,7 @@ export default function QuranPage() {
             <button
               type="button"
               onClick={() => setShowPdfOptions(false)}
-              className="absolute right-4 top-4 rounded-full p-1.5 text-slate-400 hover:bg-slate-200 dark:hover:bg-night-800"
+              className="absolute right-4 top-4 rounded-full p-1.5 text-slate-300 hover:bg-slate-200 dark:hover:bg-night-800"
             >
               <X className="size-5" />
             </button>
@@ -1057,7 +1057,7 @@ export default function QuranPage() {
                 <h3 className="font-serif text-lg font-bold text-[#121A26] dark:text-[#F3E5C8]">
                   Download Quran Pak PDF
                 </h3>
-                <p className="text-xs text-slate-500 dark:text-slate-400">
+                <p className="text-xs text-slate-500 dark:text-slate-300">
                   Select your preferred PDF version below:
                 </p>
               </div>
@@ -1079,7 +1079,7 @@ export default function QuranPage() {
                   <p className="text-xs font-bold text-[#121A26] dark:text-white">
                     📖 Complete Quran Pak — Pakistani 15-Line Print (Direct PDF Download)
                   </p>
-                  <p className="text-[10px] text-slate-500">
+                  <p className="text-[10px] text-slate-500 dark:text-slate-300">
                     Authentic Arabic Quran — complete 30 Juz (~33 MB) downloaded directly from this site, no external website.
                   </p>
                 </div>
@@ -1097,7 +1097,7 @@ export default function QuranPage() {
                   <p className="text-xs font-bold text-[#121A26] dark:text-white">
                     👁️ Preview Quran PDF in Browser (Open in New Tab)
                   </p>
-                  <p className="text-[10px] text-slate-500">
+                  <p className="text-[10px] text-slate-500 dark:text-slate-300">
                     View the complete Quran PDF first, then use the browser download button to save it.
                   </p>
                 </div>
@@ -1117,7 +1117,7 @@ export default function QuranPage() {
                   <p className="text-xs font-bold text-[#121A26] dark:text-white">
                     🖨️ Export / Print Surah {selectedSurah.transliteration}
                   </p>
-                  <p className="text-[10px] text-slate-500">
+                  <p className="text-[10px] text-slate-500 dark:text-slate-300">
                     Save or print current surah as formatted PDF document.
                   </p>
                 </div>
@@ -1128,7 +1128,7 @@ export default function QuranPage() {
               <button
                 type="button"
                 onClick={() => setShowPdfOptions(false)}
-                className="text-xs font-bold text-slate-500 hover:underline"
+                className="text-xs font-bold text-slate-500 dark:text-slate-300 hover:underline"
               >
                 Close Window
               </button>

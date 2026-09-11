@@ -252,6 +252,8 @@ return (
             src="/ai-banner.jpg"
             alt="Complete Hadith Collections & Sunnah Guidance Banner"
             fill
+            sizes="100vw"
+            quality={75}
             className="object-cover object-center scale-105"
             priority
           />
@@ -357,7 +359,7 @@ return (
                     <div className="truncate text-[11px] font-bold text-[#BFA059]" dir="rtl">
                       {b.nameArabic}
                     </div>
-                    <div className="truncate text-[10px] font-semibold text-slate-500 dark:text-slate-400">
+                    <div className="truncate text-[10px] font-semibold text-slate-500 dark:text-slate-300">
                       Complete Book · {b.hadithCount.toLocaleString()} hadiths
                       {b.hasUrdu ? " · Urdu" : ""}
                     </div>
@@ -458,7 +460,7 @@ return (
 
           {/* Result counter */}
           {!loading && searchList.length > 0 && (
-            <div className="text-xs font-bold text-slate-500 dark:text-slate-400">
+            <div className="text-xs font-bold text-slate-500 dark:text-slate-300">
               {selectedBookFilter === "all" ? (
                 <>Showing {firstVisible}–{lastVisible} curated narrations</>
               ) : (
@@ -494,7 +496,7 @@ return (
               </button>
             </div>
           ) : pagedItems.length === 0 ? (
-            <div className="rounded-3xl border-2 border-dashed border-[#BFA059]/40 p-12 text-center text-slate-400">
+            <div className="rounded-3xl border-2 border-dashed border-[#BFA059]/40 p-12 text-center text-slate-300">
               <p className="font-bold text-base">No hadiths found matching &ldquo;{query}&rdquo;</p>
             </div>
           ) : (
@@ -574,7 +576,7 @@ const hadithNum = numOf(item);
                             "flex size-8 items-center justify-center rounded-full border transition-all",
                             isBookmarked
                               ? "border-[#BFA059] bg-[#BFA059] text-[#0D1117]"
-                              : "border-[#BFA059]/30 bg-white dark:bg-[#1A202C] text-slate-400 hover:text-[#BFA059]"
+                              : "border-[#BFA059]/30 bg-white dark:bg-[#1A202C] text-slate-300 hover:text-[#BFA059]"
                           )}
                         >
                           <Star className={cn("size-4", isBookmarked && "fill-current")} />
@@ -615,7 +617,7 @@ const hadithNum = numOf(item);
                     {/* 3. English Translation Text */}
                     {(viewLang === "all" || viewLang === "ar-en") && (
                       <div className="space-y-1">
-                        <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider">
+                        <div className="text-[10px] font-black text-slate-300 uppercase tracking-wider">
                           English Translation
                         </div>
                         <p

@@ -50,7 +50,7 @@ export function Footer() {
                 </div>
                 <div>
                   <p className="font-serif text-xl font-bold tracking-tight text-[#BFA059]">Hidayah Hub</p>
-                  <p className="text-[10px] font-semibold text-slate-400">ہدایت کا مرکز · Faithful Companion</p>
+                  <p className="text-[10px] font-semibold text-slate-300">ہدایت کا مرکز · Faithful Companion</p>
                 </div>
               </div>
 
@@ -105,7 +105,7 @@ export function Footer() {
       {/* ── Bottom Bar ── */}
       <div className="border-t border-[#BFA059]/15 bg-[#090E17] py-3.5">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2.5 px-4 text-center sm:flex-row sm:px-6 lg:px-8">
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-slate-300">
             © {new Date().getFullYear()}{" "}
             <span className="font-bold text-[#BFA059]">Hidayah Hub</span>. All rights reserved.
           </p>
@@ -114,7 +114,7 @@ export function Footer() {
             ایک چھوٹا سا قدم دینِ اسلام کی خدمت میں
           </p>
 
-          <p className="flex items-center gap-1.5 text-xs text-slate-400">
+          <p className="flex items-center gap-1.5 text-xs text-slate-300">
             Made with <Heart className="size-3.5 fill-[#BFA059] text-[#BFA059]" /> for the Global Ummah
           </p>
         </div>

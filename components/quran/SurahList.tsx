@@ -29,7 +29,7 @@ export function SurahList() {
       <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center">
         <label className="relative flex-1">
           <Search
-            className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-slate-400"
+            className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-slate-300"
             aria-hidden
           />
           <input
@@ -59,14 +59,14 @@ export function SurahList() {
         </div>
       </div>
 
-      <p className="mb-4 text-sm text-slate-500 dark:text-slate-400">
+      <p className="mb-4 text-sm text-slate-500 dark:text-slate-300">
         {results.length} of {SURAHS.length} Surahs
       </p>
 
       {results.length === 0 ? (
         <div className="rounded-3xl border border-slate-200 p-12 text-center dark:border-night-800">
           <BookMarked className="mx-auto mb-3 size-8 text-slate-300" aria-hidden />
-          <p className="text-slate-500">No Surahs match “{query}”.</p>
+          <p className="text-slate-500 dark:text-slate-300">No Surahs match “{query}”.</p>
         </div>
       ) : (
         <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -92,7 +92,7 @@ export function SurahList() {
                       {surah.name}
                     </span>
                   </span>
-                  <span className="mt-0.5 flex items-center justify-between gap-2 text-xs text-slate-500 dark:text-slate-400">
+                  <span className="mt-0.5 flex items-center justify-between gap-2 text-xs text-slate-500 dark:text-slate-300">
                     <span className="truncate">{surah.english}</span>
                     <span className="shrink-0">
                       {surah.ayahs} ayahs · {surah.revelation}

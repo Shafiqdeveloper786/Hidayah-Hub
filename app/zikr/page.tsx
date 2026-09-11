@@ -157,7 +157,7 @@ export default function ZikrPage() {
 
         {/* Background image */}
         <div className="absolute inset-0 z-0">
-          <Image src="/ai-banner.jpg" alt="Zikr & Tasbeeh Banner" fill className="object-cover object-center scale-105" priority />
+          <Image src="/ai-banner.jpg" alt="Zikr & Tasbeeh Banner" fill sizes="100vw" quality={75} className="object-cover object-center scale-105" priority />
           {/* Overlay — same as AI search */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#070D18]/80 via-black/40 to-[#070D18]/70" />
           <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-transparent via-[#BFA059] to-transparent opacity-95" />
@@ -252,7 +252,7 @@ export default function ZikrPage() {
                     onClick={() => setSoundEnabled(v => !v)}
                     className="flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-[#BFA059]/20 bg-white dark:bg-[#1A202C] px-3 py-1.5 text-[11px] font-semibold transition hover:bg-slate-50"
                   >
-                    {soundEnabled ? <Volume2 className="size-3.5 text-[#BFA059]" /> : <VolumeX className="size-3.5 text-slate-400" />}
+                    {soundEnabled ? <Volume2 className="size-3.5 text-[#BFA059]" /> : <VolumeX className="size-3.5 text-slate-300" />}
                     <span className="text-slate-600 dark:text-[#EAD090]">{soundEnabled ? "Sound On" : "Muted"}</span>
                   </button>
                   <button
@@ -275,7 +275,7 @@ export default function ZikrPage() {
                 <p className="text-sm font-extrabold uppercase tracking-widest" style={{ color: selectedZikr.color }}>
                   {selectedZikr.latin}
                 </p>
-                <p className="text-[11px] text-slate-500 dark:text-slate-400 italic">
+                <p className="text-[11px] text-slate-500 dark:text-slate-300 italic">
                   &ldquo;{selectedZikr.meaning}&rdquo; · {selectedZikr.urdu}
                 </p>
               </div>
@@ -309,8 +309,8 @@ export default function ZikrPage() {
                       >
                         {count}
                       </span>
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">/ {target}</span>
-                      <span className="text-[9px] text-slate-500 mt-0.5">Tap to count</span>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-slate-300">/ {target}</span>
+                      <span className="text-[9px] text-slate-500 dark:text-slate-300 mt-0.5">Tap to count</span>
                     </div>
                   </button>
                 </div>
@@ -324,7 +324,7 @@ export default function ZikrPage() {
                     style={{ width: `${pct}%`, background: selectedZikr.color }}
                   />
                 </div>
-                <div className="flex justify-between text-[10px] font-semibold text-slate-400">
+                <div className="flex justify-between text-[10px] font-semibold text-slate-300">
                   <span>{pct}% complete</span>
                   <span>{target - count} remaining</span>
                 </div>
@@ -332,7 +332,7 @@ export default function ZikrPage() {
 
               {/* Target selector */}
               <div className="flex flex-wrap items-center justify-center gap-1.5 px-5 py-4 border-t border-[#BFA059]/10">
-                <span className="text-[10px] font-extrabold uppercase tracking-widest text-slate-400 mr-1">Target:</span>
+                <span className="text-[10px] font-extrabold uppercase tracking-widest text-slate-300 mr-1">Target:</span>
                 {[11, 33, 34, 100, 313, 500, 1000].map((t) => (
                   <button
                     key={t}
@@ -365,7 +365,7 @@ export default function ZikrPage() {
                   </div>
                   <div>
                     <p className="text-sm font-extrabold text-[#1A202C] dark:text-[#EAD090]">Daily Streak</p>
-                    <p className="text-[10px] text-slate-500">
+                    <p className="text-[10px] text-slate-500 dark:text-slate-300">
                       {store.streak > 0 ? `${store.streak}-day streak 🔥` : "Start today!"}
                     </p>
                   </div>
@@ -391,7 +391,7 @@ export default function ZikrPage() {
                     <div key={s.label} className={cn("rounded-2xl border border-slate-100 dark:border-[#BFA059]/10 p-3 text-center", s.bg)}>
                       <Icon className={cn("size-4 mx-auto mb-1", s.color)} />
                       <div className="font-mono text-base font-extrabold text-[#1A202C] dark:text-[#EAD090]">{s.val}</div>
-                      <div className="text-[9px] font-semibold uppercase tracking-wider text-slate-400 mt-0.5">{s.label}</div>
+                      <div className="text-[9px] font-semibold uppercase tracking-wider text-slate-300 mt-0.5">{s.label}</div>
                     </div>
                   );
                 })}
@@ -441,7 +441,7 @@ export default function ZikrPage() {
                     "flex items-center gap-1.5 px-4 py-2 text-[11px] font-bold uppercase tracking-wider transition-all",
                     activeAzkar === tab
                       ? "bg-[#BFA059] text-[#1A202C]"
-                      : "bg-white dark:bg-[#1A202C] text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-[#252f3e]"
+                      : "bg-white dark:bg-[#1A202C] text-slate-500 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-[#252f3e]"
                   )}
                 >
                   {tab === "morning" ? <Sun className="size-3.5" /> : <Moon className="size-3.5" />}
@@ -475,7 +475,7 @@ export default function ZikrPage() {
                       >
                         {copied === key
                           ? <Check className="size-3.5 text-emerald-500" />
-                          : <Copy className="size-3.5 text-slate-400" />}
+                          : <Copy className="size-3.5 text-slate-300" />}
                       </button>
                     </div>
                   </div>

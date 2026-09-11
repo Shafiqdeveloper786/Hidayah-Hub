@@ -52,7 +52,7 @@ export function ExploreGrid() {
             <h3 className="font-serif text-base font-bold text-brand-950 dark:text-gold-100">
               {title}
             </h3>
-            <p className="text-xs font-medium text-slate-500 dark:text-slate-400">
+            <p className="text-xs font-medium text-slate-500 dark:text-slate-300">
               {description}
             </p>
           </div>

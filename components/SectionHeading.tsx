@@ -42,7 +42,7 @@ export function SectionHeading({
         <span className="h-px w-10 bg-brand-400" aria-hidden />
       </div>
       {description ? (
-        <p className="text-pretty mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+        <p className="text-pretty mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-300">
           {description}
         </p>
       ) : null}

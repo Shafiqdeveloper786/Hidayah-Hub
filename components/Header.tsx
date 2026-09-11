@@ -73,7 +73,7 @@ function DrawerLink({
           "flex size-9 shrink-0 items-center justify-center rounded-xl border transition-colors",
           active
             ? "border-gold-500 bg-gold-500/25 text-gold-600"
-            : "border-slate-200 bg-white text-slate-500 dark:border-night-800 dark:bg-night-950 dark:text-slate-400"
+            : "border-slate-200 bg-white text-slate-500 dark:border-night-800 dark:bg-night-950 dark:text-slate-300"
         )}
       >
         {Icon ? <Icon className="size-4.5" aria-hidden /> : null}

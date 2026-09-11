@@ -196,7 +196,7 @@ export default function QiblaPage() {
           <Image
             src="/ai-banner.jpg"
             alt="Qibla Finder Banner"
-            fill
+            fill sizes="100vw" quality={75}
             className="object-cover object-center scale-105"
             priority
           />
@@ -354,7 +354,7 @@ export default function QiblaPage() {
                 <Globe2 className="size-5 text-[#BFA059]" />
                 Location &amp; Coordinates
               </h2>
-              <span className="text-xs font-semibold text-slate-400">
+              <span className="text-xs font-semibold text-slate-300">
                 GPS Precision
               </span>
             </div>
@@ -372,7 +372,7 @@ export default function QiblaPage() {
 
             {/* City Dropdown Selector */}
             <div className="space-y-1.5">
-              <label className="text-xs font-semibold text-slate-600 dark:text-slate-400">
+              <label className="text-xs font-semibold text-slate-600 dark:text-slate-300">
                 Or Select a Major City:
               </label>
               <select
@@ -398,7 +398,7 @@ export default function QiblaPage() {
           {/* Quick Metrics Grid */}
           <div className="grid grid-cols-2 gap-4">
             <div className="rounded-2xl border border-[#BFA059]/30 bg-white p-4 shadow-md dark:bg-night-900 text-center space-y-1">
-              <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+              <p className="text-[11px] font-bold uppercase tracking-wider text-slate-300">
                 Distance to Kaaba
               </p>
               <p className="font-mono text-2xl font-bold text-[#8C6F2D] dark:text-gold-200">
@@ -408,7 +408,7 @@ export default function QiblaPage() {
             </div>
 
             <div className="rounded-2xl border border-[#BFA059]/30 bg-white p-4 shadow-md dark:bg-night-900 text-center space-y-1">
-              <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+              <p className="text-[11px] font-bold uppercase tracking-wider text-slate-300">
                 Kaaba Target
               </p>
               <p className="font-mono text-lg font-bold text-slate-800 dark:text-slate-200">

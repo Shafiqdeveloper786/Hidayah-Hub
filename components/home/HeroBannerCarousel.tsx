@@ -98,14 +98,17 @@ export function HeroBannerCarousel() {
         maxHeight: "440px",
       }}
     >
-      {/* AI Search Background Image Layer */}
+      {/* AI Search Background Image Layer — LCP element */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/ai-banner.jpg"
           alt="Home Hero Banner Background"
           fill
-          className="object-cover object-center scale-105"
           priority
+          fetchPriority="high"
+          sizes="100vw"
+          quality={75}
+          className="object-cover object-center scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#070D18]/85 via-black/60 to-[#070D18]/75" />
       </div>
@@ -127,6 +130,8 @@ export function HeroBannerCarousel() {
               src="/roza-pak.jpg"
               alt="Roza Pak Medina"
               fill
+              sizes="210px"
+              quality={70}
               className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
               priority
             />
@@ -149,7 +154,15 @@ export function HeroBannerCarousel() {
           {/* Mobile Floating Image Badges (Larger) */}
           <div className="flex lg:hidden items-center justify-center gap-3.5 mb-2.5">
             <div className="relative size-14 overflow-hidden rounded-t-full rounded-b-lg border-2 border-[#BFA059] shadow-lg">
-              <Image src="/roza-pak.jpg" alt="Roza Pak" fill className="object-cover" />
+              <Image
+                src="/roza-pak.jpg"
+                alt="Roza Pak"
+                fill
+                sizes="56px"
+                quality={70}
+                className="object-cover"
+                loading="lazy"
+              />
             </div>
             <span
               className="inline-flex items-center gap-1 rounded-full px-4 py-1 text-[11px] font-bold uppercase tracking-[0.2em] shadow-md"
@@ -162,7 +175,15 @@ export function HeroBannerCarousel() {
               ✦ {b.type} ✦
             </span>
             <div className="relative size-14 overflow-hidden rounded-t-full rounded-b-lg border-2 border-[#BFA059] shadow-lg">
-              <Image src="/kaaba.jpg" alt="Kaaba Mecca" fill className="object-cover" />
+              <Image
+                src="/kaaba.jpg"
+                alt="Kaaba Mecca"
+                fill
+                sizes="56px"
+                quality={70}
+                className="object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
 
@@ -213,7 +234,7 @@ export function HeroBannerCarousel() {
           </p>
 
           {/* Reference Source */}
-          <p className="mt-1.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">
+          <p className="mt-1.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-slate-200">
             ({b.reference})
           </p>
 
@@ -234,6 +255,8 @@ export function HeroBannerCarousel() {
               src="/kaaba.jpg"
               alt="Kaaba Mecca"
               fill
+              sizes="210px"
+              quality={70}
               className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
               priority
             />
@@ -253,7 +276,7 @@ export function HeroBannerCarousel() {
         type="button"
         onClick={prev}
         aria-label="Previous Slide"
-        className="absolute left-3 sm:left-5 top-1/2 z-20 flex size-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-md border border-[#BFA059]/40 transition hover:bg-black/80 hover:scale-110"
+        className="absolute left-3 sm:left-5 top-1/2 z-20 flex size-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-md border border-[#BFA059]/40 transition hover:bg-black/80 hover:scale-110"
       >
         <ChevronLeft className="size-5 text-[#BFA059]" />
       </button>
@@ -263,12 +286,12 @@ export function HeroBannerCarousel() {
         type="button"
         onClick={next}
         aria-label="Next Slide"
-        className="absolute right-3 sm:right-5 top-1/2 z-20 flex size-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-md border border-[#BFA059]/40 transition hover:bg-black/80 hover:scale-110"
+        className="absolute right-3 sm:right-5 top-1/2 z-20 flex size-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-md border border-[#BFA059]/40 transition hover:bg-black/80 hover:scale-110"
       >
         <ChevronRight className="size-5 text-[#BFA059]" />
       </button>
 
-      {/* Slider Pagination Dots */}
+      {/* Slider Pagination Dots — 32px touch targets with visible inner dot */}
       <div className="absolute bottom-3.5 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2">
         {BANNERS.map((_, i) => (
           <button
@@ -276,13 +299,18 @@ export function HeroBannerCarousel() {
             type="button"
             onClick={() => goTo(i)}
             aria-label={`Go to slide ${i + 1}`}
-            className="rounded-full transition-all duration-300 cursor-pointer"
-            style={{
-              width: i === active ? "30px" : "8px",
-              height: "7px",
-              background: i === active ? b.accent : "rgba(255,255,255,0.35)",
-            }}
-          />
+            aria-current={i === active ? "true" : "false"}
+            className="flex h-8 min-w-8 items-center justify-center rounded-full transition-all duration-300 cursor-pointer"
+          >
+            <span
+              className="block rounded-full transition-all duration-300"
+              style={{
+                width: i === active ? "28px" : "8px",
+                height: "7px",
+                background: i === active ? b.accent : "rgba(255,255,255,0.45)",
+              }}
+            />
+          </button>
         ))}
       </div>
     </div>

@@ -171,7 +171,7 @@ export function PrayerWidget() {
                   {mounted ? `${pad2(hrs)}:${pad2(mins)}:${pad2(secs)}` : "00:00:00"}
                 </span>
               </div>
-              <p className="mt-0.5 text-[10px] text-slate-400">time remaining</p>
+              <p className="mt-0.5 text-[10px] text-slate-300">time remaining</p>
             </div>
           </div>
         </div>
@@ -191,7 +191,7 @@ export function PrayerWidget() {
               >
                 <span
                   className={`text-[9px] font-bold uppercase tracking-wider ${
-                    isNext ? "text-[#BFA059]" : "text-slate-400"
+                    isNext ? "text-[#BFA059]" : "text-slate-300"
                   }`}
                 >
                   {PRAYER_LABELS[name].slice(0, 3)}

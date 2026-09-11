@@ -104,7 +104,7 @@ export default function DuasPage() {
           <Image
             src="/ai-banner.jpg"
             alt="Masnoon Duas Banner"
-            fill
+            fill sizes="100vw" quality={75}
             className="object-cover object-center scale-105"
             priority
           />
@@ -141,7 +141,7 @@ export default function DuasPage() {
               <button
                 type="button"
                 onClick={() => setSearchQuery("")}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-white"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-slate-300 hover:text-white"
               >
                 Clear
               </button>
@@ -150,7 +150,7 @@ export default function DuasPage() {
 
           {/* Translation View Filter & Quick Stats */}
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-            <span className="text-xs text-slate-400 font-medium">View Mode:</span>
+            <span className="text-xs text-slate-300 font-medium">View Mode:</span>
             <div className="inline-flex rounded-xl border border-[#BFA059]/40 bg-black/40 p-1 backdrop-blur-md">
               <button
                 type="button"
@@ -246,7 +246,7 @@ export default function DuasPage() {
           <h3 className="font-serif text-xl font-bold text-slate-800 dark:text-slate-200">
             No supplications found
           </h3>
-          <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+          <p className="mt-1 text-sm text-slate-500 dark:text-slate-300">
             Try adjusting your search query or selecting a different category filter.
           </p>
         </div>
@@ -282,7 +282,7 @@ export default function DuasPage() {
                         "rounded-full p-2.5 transition-all active:scale-90",
                         isBookmarked
                           ? "bg-[#BFA059] text-black shadow-md"
-                          : "bg-black/5 dark:bg-white/10 text-slate-400 hover:text-[#BFA059]"
+                          : "bg-black/5 dark:bg-white/10 text-slate-300 hover:text-[#BFA059]"
                       )}
                     >
                       <Bookmark className={cn("size-4", isBookmarked && "fill-current")} />
@@ -301,7 +301,7 @@ export default function DuasPage() {
                   </div>
 
                   {/* Transliteration */}
-                  <p className="text-xs italic leading-relaxed text-slate-600 dark:text-slate-400 bg-white/40 dark:bg-black/20 p-2.5 rounded-xl border border-slate-200/50 dark:border-slate-800/50">
+                  <p className="text-xs italic leading-relaxed text-slate-600 dark:text-slate-300 bg-white/40 dark:bg-black/20 p-2.5 rounded-xl border border-slate-200/50 dark:border-slate-800/50">
                     <span className="font-semibold not-italic text-[#BFA059] mr-1">Transliteration:</span>
                     {dua.transliteration}
                   </p>
@@ -343,7 +343,7 @@ export default function DuasPage() {
 
                 {/* Footer: Source Reference & Action Buttons */}
                 <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-[#BFA059]/20 pt-4">
-                  <span className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 dark:text-slate-400">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 dark:text-slate-300">
                     <Quote className="size-3.5 text-[#BFA059]" />
                     {dua.reference}
                   </span>

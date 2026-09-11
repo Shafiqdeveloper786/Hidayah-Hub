@@ -126,9 +126,10 @@ export function AiSearchBar() {
           <button
             type="button"
             onClick={clear}
-            className="ml-auto rounded-full p-1 text-slate-400 hover:text-slate-600"
+            aria-label="Clear answer and reset search"
+            className="ml-auto flex size-9 items-center justify-center rounded-full text-slate-300 hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-night-800 dark:hover:text-slate-200"
           >
-            <X className="size-4" />
+            <X className="size-4.5" />
           </button>
         )}
       </div>
@@ -141,7 +142,7 @@ export function AiSearchBar() {
         }}
       >
         <div className="relative">
-          <Search className="pointer-events-none absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-slate-400" />
+          <Search className="pointer-events-none absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-slate-300" />
           <input
             type="text"
             value={value}
@@ -152,7 +153,8 @@ export function AiSearchBar() {
           <button
             type="submit"
             disabled={!value.trim() || loading}
-            className="absolute right-2 top-1/2 flex size-7 -translate-y-1/2 items-center justify-center rounded-xl bg-[#BFA059] text-[#1A202C] transition hover:scale-105 active:scale-95 disabled:opacity-40"
+            aria-label={loading ? "Searching..." : "Search"}
+            className="absolute right-2 top-1/2 flex size-9 -translate-y-1/2 items-center justify-center rounded-xl bg-[#BFA059] text-[#1A202C] transition hover:scale-105 active:scale-95 disabled:opacity-40"
           >
             {loading ? (
               <Loader2 className="size-3.5 animate-spin" />
@@ -186,7 +188,9 @@ export function AiSearchBar() {
             <div className="size-10 animate-spin rounded-full border-4 border-[#BFA059]/20 border-t-[#BFA059]" />
             <BookOpen className="absolute size-4 text-[#BFA059]" />
           </div>
-          <p className="text-xs font-semibold text-slate-500">Searching Quran &amp; Hadith…</p>
+          <p className="text-xs font-semibold text-slate-600 dark:text-slate-300">
+            Searching Quran &amp; Hadith…
+          </p>
         </div>
       )}
 
@@ -269,14 +273,16 @@ export function AiSearchBar() {
               )}
               {copied ? "Copied!" : "Copy"}
             </button>
-            <p className="ml-auto text-[10px] text-slate-400">Authentic Knowledge</p>
+            <p className="ml-auto text-[10px] font-semibold text-slate-500 dark:text-slate-300">
+              Authentic Knowledge
+            </p>
           </div>
         </div>
       )}
 
       {/* Footer Note */}
       {!answer && !loading && (
-        <p className="text-center text-[11px] text-slate-400">
+        <p className="text-center text-[11px] font-semibold text-slate-500 dark:text-slate-300">
           Answers based on authentic Quran &amp; Hadith
         </p>
       )}

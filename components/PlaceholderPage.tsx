@@ -37,7 +37,7 @@ export function PlaceholderPage({
           <h1 className="mt-3 font-serif text-3xl font-semibold text-brand-950 dark:text-gold-50">
             {title}
           </h1>
-          <p className="mx-auto mt-3 max-w-md text-pretty text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+          <p className="mx-auto mt-3 max-w-md text-pretty text-sm leading-relaxed text-slate-600 dark:text-slate-300">
             {description}
           </p>
           <Link

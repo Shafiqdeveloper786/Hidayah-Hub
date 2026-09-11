@@ -346,7 +346,7 @@ export default function PrayerTimesPage() {
           <Image
             src="/ai-banner.jpg"
             alt="Islamic Prayer Times & Location Guidance Banner"
-            fill
+            fill sizes="100vw" quality={75}
             className="object-cover object-center scale-105"
             priority
           />
@@ -403,7 +403,7 @@ export default function PrayerTimesPage() {
                   "inline-flex items-center gap-1.5 rounded-2xl px-4 py-2.5 text-xs font-bold transition-all",
                   audioAlertEnabled
                     ? "border-2 border-[#BFA059] bg-[#BFA059]/20 text-[#EAD090] shadow-sm"
-                    : "border border-slate-600 bg-slate-800 text-slate-400"
+                    : "border border-slate-600 bg-slate-800 text-slate-300"
                 )}
               >
                 {audioAlertEnabled ? <Bell className="size-4 text-[#BFA059]" /> : <BellOff className="size-4" />}
@@ -612,7 +612,7 @@ export default function PrayerTimesPage() {
               </div>
 
               {/* Card Footer Indicator */}
-              <div className="border-t border-[#BFA059]/20 pt-4 flex items-center justify-between text-xs font-bold text-slate-400">
+              <div className="border-t border-[#BFA059]/20 pt-4 flex items-center justify-between text-xs font-bold text-slate-300">
                 <span>Islamic Timings</span>
                 <span className="font-arabic text-base text-[#BFA059]">{PRAYER_ARABIC[name]}</span>
               </div>

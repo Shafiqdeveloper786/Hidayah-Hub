@@ -139,7 +139,7 @@ export default function DonatePage() {
           <Image
             src="/ai-banner.jpg"
             alt="Support Hidayah Hub Banner"
-            fill
+            fill sizes="100vw" quality={75}
             className="object-cover object-center scale-105"
             priority
           />

@@ -98,7 +98,7 @@ export default function AboutPage() {
           <Image
             src="/ai-banner.jpg"
             alt="About Hidayah Hub Banner"
-            fill
+            fill sizes="100vw" quality={75}
             className="object-cover object-center scale-105"
             priority
           />
@@ -198,7 +198,7 @@ export default function AboutPage() {
                     {f.title}
                   </h3>
 
-                  <p className="text-xs leading-relaxed text-slate-600 dark:text-slate-400">
+                  <p className="text-xs leading-relaxed text-slate-600 dark:text-slate-300">
                     {f.desc}
                   </p>
                 </div>
@@ -233,7 +233,7 @@ export default function AboutPage() {
                 <h3 className="font-serif text-lg font-bold text-slate-900 dark:text-gold-100">
                   {val.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   {val.text}
                 </p>
               </div>
@@ -261,15 +261,15 @@ export default function AboutPage() {
         <div className="grid gap-4 sm:grid-cols-3 text-xs text-slate-300">
           <div className="rounded-2xl border border-slate-800 bg-black/40 p-4 space-y-1">
             <p className="font-bold text-[#D1B876]">Next.js 16 (App Router)</p>
-            <p className="text-slate-400">Server-side rendering, instant page transitions, and static site generation.</p>
+            <p className="text-slate-300">Server-side rendering, instant page transitions, and static site generation.</p>
           </div>
           <div className="rounded-2xl border border-slate-800 bg-black/40 p-4 space-y-1">
             <p className="font-bold text-[#D1B876]">TypeScript &amp; Tailwind</p>
-            <p className="text-slate-400">Strict type safety, responsive design system, and custom Islamic gold themes.</p>
+            <p className="text-slate-300">Strict type safety, responsive design system, and custom Islamic gold themes.</p>
           </div>
           <div className="rounded-2xl border border-slate-800 bg-black/40 p-4 space-y-1">
             <p className="font-bold text-[#D1B876]">HTML5 Web Audio &amp; GPS</p>
-            <p className="text-slate-400">Native browser audio streaming for Makkah Adhan and Geolocation APIs.</p>
+            <p className="text-slate-300">Native browser audio streaming for Makkah Adhan and Geolocation APIs.</p>
           </div>
         </div>
       </div>

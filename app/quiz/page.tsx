@@ -400,7 +400,7 @@ export default function QuizPage() {
           <Image
             src="/ai-banner.jpg"
             alt="Islamic Quiz Banner"
-            fill
+            fill sizes="100vw" quality={75}
             className="object-cover object-center scale-105"
             priority
           />
@@ -623,7 +623,7 @@ export default function QuizPage() {
 
           {/* Final Score Circle */}
           <div className="rounded-3xl border-2 border-[#BFA059]/30 bg-[#FAF7F0] p-6 dark:bg-night-950 max-w-sm mx-auto space-y-2 shadow-inner">
-            <p className="text-xs font-black uppercase tracking-widest text-slate-400">
+            <p className="text-xs font-black uppercase tracking-widest text-slate-300">
               Your Final Score
             </p>
             <p className="font-mono text-5xl font-extrabold text-[#8C6F2D] dark:text-gold-100">

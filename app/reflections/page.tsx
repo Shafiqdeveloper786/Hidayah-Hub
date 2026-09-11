@@ -332,7 +332,7 @@ export default function ReflectionsPage() {
           <Image
             src="/ai-banner.jpg"
             alt="Spiritual Reflections & Quranic Wisdom Banner"
-            fill
+            fill sizes="100vw" quality={75}
             className="object-cover object-center scale-105"
             priority
           />
@@ -369,7 +369,7 @@ export default function ReflectionsPage() {
               <button
                 type="button"
                 onClick={() => setSearch("")}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-300 hover:text-slate-600 dark:text-slate-300"
               >
                 <X className="size-4" />
               </button>
@@ -382,7 +382,7 @@ export default function ReflectionsPage() {
       <div className="space-y-4">
         {/* Language Switcher bar for main cards grid */}
         <div className="flex items-center justify-center gap-3 pb-2">
-          <span className="text-xs font-bold text-slate-500 dark:text-slate-400">Language / زبان:</span>
+          <span className="text-xs font-bold text-slate-500 dark:text-slate-300">Language / زبان:</span>
           <div className="inline-flex rounded-full border-2 border-[#BFA059]/60 p-1 bg-white dark:bg-[#111827] shadow-md">
             <button
               type="button"
@@ -451,7 +451,7 @@ export default function ReflectionsPage() {
 
       {/* ══ 4. MAIN REFLECTION CARDS GRID ═════════════════════════════════════ */}
       {filtered.length === 0 ? (
-        <div className="rounded-3xl border border-dashed border-[#BFA059]/40 p-12 text-center text-slate-400 space-y-3">
+        <div className="rounded-3xl border border-dashed border-[#BFA059]/40 p-12 text-center text-slate-300 space-y-3">
           <Sparkles className="size-10 mx-auto text-[#BFA059] opacity-40" />
           <p className="font-bold text-base text-slate-600 dark:text-slate-300">
             No reflections matched your search criteria.
@@ -498,7 +498,7 @@ export default function ReflectionsPage() {
                     >
                       {item.category}
                     </span>
-                    <span className="inline-flex items-center gap-1 text-[11px] font-bold text-slate-400 dark:text-slate-400">
+                    <span className="inline-flex items-center gap-1 text-[11px] font-bold text-slate-300 dark:text-slate-300">
                       <Clock className="size-3 text-[#BFA059]" />
                       {item.readTime}
                     </span>
@@ -532,7 +532,7 @@ export default function ReflectionsPage() {
                     >
                       {item.quoteArabic}
                     </p>
-                    <p className="text-[10px] text-slate-600 dark:text-slate-400 italic line-clamp-2">
+                    <p className="text-[10px] text-slate-600 dark:text-slate-300 italic line-clamp-2">
                       &ldquo;{item.quoteTranslation}&rdquo;
                     </p>
                   </div>
@@ -584,7 +584,7 @@ export default function ReflectionsPage() {
                         "flex size-8 items-center justify-center rounded-full border transition-all duration-200",
                         isBookmarked
                           ? "border-[#BFA059] bg-[#BFA059] text-[#0D1117] shadow-md"
-                          : "border-slate-200 dark:border-[#BFA059]/30 bg-white dark:bg-[#1A202C] text-slate-400 hover:text-[#BFA059]"
+                          : "border-slate-200 dark:border-[#BFA059]/30 bg-white dark:bg-[#1A202C] text-slate-300 hover:text-[#BFA059]"
                       )}
                     >
                       <Star className={cn("size-3.5", isBookmarked && "fill-current")} />
@@ -599,7 +599,7 @@ export default function ReflectionsPage() {
                         "flex size-8 items-center justify-center rounded-full border transition-all duration-200",
                         isLiked
                           ? "border-rose-500 bg-rose-500 text-white shadow-md"
-                          : "border-slate-200 dark:border-[#BFA059]/30 bg-white dark:bg-[#1A202C] text-slate-400 hover:text-rose-500"
+                          : "border-slate-200 dark:border-[#BFA059]/30 bg-white dark:bg-[#1A202C] text-slate-300 hover:text-rose-500"
                       )}
                     >
                       <Heart className={cn("size-3.5", isLiked && "fill-current")} />
@@ -725,7 +725,7 @@ export default function ReflectionsPage() {
                 <p className="text-sm font-bold text-[#BFA059]">
                   {selectedReflection.subtitle}
                 </p>
-                <div className="flex items-center gap-3 text-xs text-slate-400 font-medium">
+                <div className="flex items-center gap-3 text-xs text-slate-300 font-medium">
                   <span>Author: {selectedReflection.author}</span>
                   <span>•</span>
                   <span>{selectedReflection.readTime}</span>

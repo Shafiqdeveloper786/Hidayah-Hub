@@ -70,7 +70,7 @@ export function AyatHero() {
             </p>
 
             {/* Surah Reference */}
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-300">
               ({verse.reference})
             </p>
           </blockquote>
